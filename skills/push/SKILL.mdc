@@ -1,6 +1,7 @@
 ---
 name: push
 description: Guide the user through creating a pull request with a clear change summary and simple conflict resolution
+alwaysApply: false
 ---
 
 # Create Pull Request from Local Changes
