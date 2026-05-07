@@ -1,0 +1,10 @@
+---
+description: Tool choice and MCP vs CLI preference
+alwaysApply: true
+---
+
+Prefer **appropriate tools** before asking idle questions.
+
+**MCP preference:** When a configured MCP integrates with external services (GitHub, hosting, databases, browsers, docs providers), prefer that MCP over **manual CLI equivalents** **when it can satisfy the task with comparable fidelity** — especially where auth or sandboxing differs.
+
+Adapt to whichever MCP servers are actually enabled in each workspace rather than relying on vendor-specific MCP IDs.

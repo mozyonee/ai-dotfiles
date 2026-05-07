@@ -1,0 +1,11 @@
+---
+description: Code edits and commenting style (formatter-agnostic)
+alwaysApply: true
+---
+
+Follow the repo’s prevailing style and toolchain:
+
+- Indentation and line width **match surrounding files** and the project formatter (run the project’s format command after substantive edits—e.g. `npm run format` when applicable).
+- Prefer clarity over cleverness.
+- **Comments:** explain **why**, single-line when used, only for non-obvious behavior / perf / tricky algorithms / business rules / data categorization; avoid JSDoc blocks and narration of obvious names or markup.
+- Avoid blank lines inserted solely before comments unless the codebase already uses that pattern.

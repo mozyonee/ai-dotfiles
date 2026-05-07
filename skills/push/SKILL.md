@@ -1,0 +1,137 @@
+---
+name: push
+description: Guide the user through creating a pull request with a clear change summary and simple conflict resolution
+---
+
+# Create Pull Request from Local Changes
+
+## Overview
+
+Guide the user through the full workflow from local uncommitted changes to a well-structured pull request with clear context for reviewers.
+
+## When to Use
+
+Use this skill when:
+- The user explicitly requests the creation of a pull request.
+
+## Instructions
+
+
+## 1. Explore Changes
+
+Run: git diff
+
+Provide a brief but complete summary of the changes, covering:
+
+* What changed
+* Why it changed
+* Impact on behavior, performance, or structure
+
+Keep the summary proportional to the size and complexity of the diff. Include important context, but avoid unnecessary detail.
+
+---
+
+## 2. Create Branch
+
+Run: git checkout -b <type>/<short-description>
+
+Naming:
+
+* feat/ → new feature
+* fix/ → bug fix
+* chore/ → maintenance
+* refactor/ → internal improvement
+
+Example: feat/user-auth
+
+---
+
+## 3. Stage Changes
+
+Run: git add -A
+
+---
+
+## 4. Commit
+
+Run: git commit -m "<type>: <short summary>"
+
+Rules:
+
+* Keep under ~70 characters
+* Use imperative tone
+* Match branch type
+
+Example: feat: add JWT authentication
+
+---
+
+## 5. Push Branch
+
+Run: git push -u origin <branch-name>
+
+**If you encounter a permission error:**
+You may not have write access to the repository. Check your access rights or contact the repository administrator. If working with a fork, ensure you're pushing to your own fork, not the upstream repository.
+
+---
+
+## 6. Sync With Main (Optional)
+
+Before creating the pull request, check whether `main` has new commits.
+
+If new commits exist:
+1. Pull latest changes from `main`
+2. Rebase or merge them into the current branch
+
+### Handling Conflicts
+
+If conflicts appear:
+
+**Step 1: Determine file criticality**
+
+Ask: "Is this file part of authentication, database schema, configuration, or shared utilities used across 5+ files?"
+
+**For critical files (answer: YES):**
+1. Keep the main branch version as the base
+2. Adapt your changes to work with the new main version
+3. Test the merge
+4. Stage and continue
+
+**For non-critical files (answer: NO):**
+1. Keep your changes as the base
+2. Check if main branch changes break your code
+3. Merge without breaking functionality
+4. Stage and continue
+
+---
+
+## 7. Create Pull Request (via GitHub MCP)
+
+### Title
+
+Same as commit message
+
+### Description Structure
+
+Summary
+
+* What was implemented
+
+Changes Walkthrough
+  
+* What changed and how it works
+* Why this approach was used
+* Impact on system behavior
+
+Testing Checklist
+
+* List a few relevant things a reviewer should verify based on the changes
+* Focus on behavior, not implementation details
+* Avoid generic or boilerplate items
+* Use checkboxes
+
+---
+
+## 8. Return to Main
+
+Run: git checkout main

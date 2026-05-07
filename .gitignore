@@ -1,0 +1,20 @@
+# Curated Cursor dotfiles for GitHub.
+# Tracks only user-authored rules + personal skills under ~/.cursor.
+#
+# Explicitly omitted (never commit): projects/, chats/, plugins/ cache,
+# skills-cursor/ (bundled Cursor skills), extensions/, MCP & CLI config,
+# allow/block lists, prompt history, IDE state, and other local or sensitive data.
+
+/*
+!/.gitignore
+
+!/rules/
+/rules/*
+!/rules/**
+
+!/skills/
+/skills/*
+!/skills/**
+
+.DS_Store
+**/.DS_Store

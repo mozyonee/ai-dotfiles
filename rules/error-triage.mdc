@@ -1,0 +1,14 @@
+---
+description: Error triage order before asking the user
+alwaysApply: true
+---
+
+When an error occurs, check in order:
+
+1. Type errors
+2. Syntax errors
+3. Lint issues
+4. Dependency mismatches
+5. Related module failures
+
+Ask the user only if the failure is inherently runtime/context-dependent **or** cannot be detected programmatically after those checks.
