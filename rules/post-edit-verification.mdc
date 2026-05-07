@@ -1,0 +1,13 @@
+---
+description: Run lint and typecheck after substantive edits using project-defined commands
+alwaysApply: true
+---
+
+When you finish meaningful changes in a codebase (not typo-only edits unless they touch typed/linted code):
+
+- Run the project’s **lint** command if defined (often `eslint`, or CI equivalents).
+- Run the project’s **typecheck** if defined (often `npx tsc --noEmit`, etc.).
+- Take script names from `AGENTS.md`, `README.md`, `package.json`, or CI—not assumptions.
+- If the repo defines neither or your edits are non-code only, skip; mention that briefly only when it affects how you verified the change.
+
+Run these **before** treating the task as finished, unless the user explicitly waived checks.
