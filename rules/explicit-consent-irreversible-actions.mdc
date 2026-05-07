@@ -1,0 +1,13 @@
+---
+description: No commits deploys deletes or other irreversible side effects without explicit user request
+alwaysApply: true
+---
+
+Unless the user clearly requests **that exact** action:
+
+- **Source control:** do not `git commit`, `git push`, create/delete remote branches, open or merge PRs, publish releases, rename or delete remotes/repos, `--force`/history rewrites, or similar operations that permanently publish or scramble shared history.
+- **Environments & data:** do not deploy to production, run destructive infra or cloud operations, drop databases or truncate tables, wipe volumes/buckets, or delete or overwrite data you cannot realistically restore without explicit confirmation of the blast radius.
+- **Local & tooling:** do not run commands whose primary effect is large-scale deletion, privilege escalation beyond what the task needs, or broad irreversible MCP/API side effects when a safer preview or dry-run exists and was not waived.
+- **Communications:** do not send externally visible messages (e.g. customer email, social post, billing change) pretending to represent the user.
+
+When an action might be reversible (soft delete with undo, staged draft), say what would make it irreversible and wait for confirmation before committing to the destructive step.

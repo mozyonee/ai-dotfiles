@@ -1,11 +1,13 @@
 # AI dotfiles
 
-This repository holds a **small, intentional slice** of my [Cursor](https://cursor.com) user configuration: global **rules** (`.mdc` files that steer the agent) and **custom Agent Skills** I use across projects.
+Portable **agent rules** and **skill-style prompts** I use with coding assistants. The same ideas apply across models and products; in my setup they live under `~/.cursor` in [Cursor](https://cursor.com). Only a curated subset is tracked here—see `.gitignore` for what stays local (secrets, IDE state, caches).
 
-Most of `~/.cursor` is **not** here on purpose. Things like MCP secrets, CLI allow lists, project workspace state, bundled Cursor skills, plugin caches, chat history, and local IDE data stay private and untracked—see `.gitignore`.
+---
 
-**Why publish it?** So I can version my own prompts and reuse them on new machines, and so others can crib ideas or fork the pieces that help them.
+## 🤝 Contributions
 
-## Contributing
+> **Forks and pull requests are welcome.** If you adapt a rule or skill for another tool or model, or tighten wording so it works more reliably everywhere, I’d love to see it.
 
-Suggestions and improvements are welcome. **Fork** the repo or open a **pull request** with changes you would find useful; I will review when I can.
+- Open a **PR** with a short note on what changed and why it generalizes or improves behavior.
+- **Fork** freely for your own dotfiles; no need to ask.
+- I review when I can; smaller, focused changes are easier to merge.
