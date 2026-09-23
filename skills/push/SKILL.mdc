@@ -17,16 +17,14 @@ Use this skill when:
 
 ## Instructions
 
-
 ## 1. Explore Changes
 
 Run: git diff
 
 Provide a brief but complete summary of the changes, covering:
-
-* What changed
-* Why it changed
-* Impact on behavior, performance, or structure
+- What changed
+- Why it changed
+- Impact on behavior, performance, or structure
 
 Keep the summary proportional to the size and complexity of the diff. Include important context, but avoid unnecessary detail.
 
@@ -37,11 +35,10 @@ Keep the summary proportional to the size and complexity of the diff. Include im
 Run: git checkout -b <type>/<short-description>
 
 Naming:
-
-* feat/ → new feature
-* fix/ → bug fix
-* chore/ → maintenance
-* refactor/ → internal improvement
+- feat/ → new feature
+- fix/ → bug fix
+- chore/ → maintenance
+- refactor/ → internal improvement
 
 Example: feat/user-auth
 
@@ -58,10 +55,9 @@ Run: git add -A
 Run: git commit -m "<type>: <short summary>"
 
 Rules:
-
-* Keep under ~70 characters
-* Use imperative tone
-* Match branch type
+- Keep under ~70 characters
+- Use imperative tone
+- Match branch type
 
 Example: feat: add JWT authentication
 
@@ -76,7 +72,7 @@ You may not have write access to the repository. Check your access rights or con
 
 ---
 
-## 6. Sync With Main (Optional)
+## 6. Sync With Main
 
 Before creating the pull request, check whether `main` has new commits.
 
@@ -106,7 +102,7 @@ Ask: "Is this file part of authentication, database schema, configuration, or sh
 
 ---
 
-## 7. Create Pull Request (via GitHub MCP)
+## 7. Create Pull Request (via GitHub MCP or CLI)
 
 ### Title
 
@@ -115,21 +111,18 @@ Same as commit message
 ### Description Structure
 
 Summary
-
-* What was implemented
+- What was implemented
 
 Changes Walkthrough
-  
-* What changed and how it works
-* Why this approach was used
-* Impact on system behavior
+- What changed and how it works
+- Why this approach was used
+- Impact on system behavior
 
 Testing Checklist
-
-* List a few relevant things a reviewer should verify based on the changes
-* Focus on behavior, not implementation details
-* Avoid generic or boilerplate items
-* Use checkboxes
+- List a few relevant things a reviewer should verify based on the changes
+- Focus on behavior, not implementation details
+- Avoid generic or boilerplate items
+- Use checkboxes
 
 ---
 
