@@ -1,0 +1,32 @@
+---
+description: Failure loops, root-cause investigation, error triage, and conflict priorities
+alwaysApply: true
+---
+
+When rules conflict, follow this priority order:
+
+1. Do not repeat a failing approach
+2. Do not guess when information is unknown
+3. Investigate root cause before modifying code
+4. Use tools before asking the user
+5. Maintain project formatting standards
+
+**Same approach** means the same method, tool, or fix strategy category.
+
+| Condition | Required action |
+|-----------|-----------------|
+| Approach failed once | Re-evaluate assumptions and environment |
+| Same approach failed twice | **Stop** retrying variants of that approach; switch to investigation mode |
+
+**Investigation mode** must include at least one of: docs search, codebase search, logs or runtime/system checks, dependency or environment verification.
+
+Before implementing a fix, confirm at least one: identified source of failure, verified incorrect assumption, located failing component, or documentation-supported solution. If none → keep investigating.
+
+**Lightweight pre-action gate** before edits — if any check fails, investigate instead:
+
+- This method has not already failed twice
+- Required information is confirmed
+- Root cause is identified
+- Example inputs from the user are not treated as literal copy-paste requirements
+
+When an error occurs, check in order before asking the user: (1) type errors, (2) syntax errors, (3) lint issues, (4) dependency mismatches, (5) related module failures. Ask only if the failure is inherently runtime/context-dependent **or** cannot be detected programmatically after those checks.
