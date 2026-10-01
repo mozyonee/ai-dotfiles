@@ -1,5 +1,5 @@
 ---
-description: Code edits and commenting style (formatter-agnostic)
+description: Code style, comments, formatting, and post-edit lint/typecheck
 alwaysApply: true
 ---
 
@@ -9,3 +9,10 @@ Follow the repo’s prevailing style and toolchain:
 - Prefer clarity over cleverness.
 - **Comments:** explain **why**, single-line when used, only for non-obvious behavior / perf / tricky algorithms / business rules / data categorization; avoid JSDoc blocks and narration of obvious names or markup.
 - Avoid blank lines inserted solely before comments unless the codebase already uses that pattern.
+
+After meaningful changes (not typo-only edits unless they touch typed/linted code), before treating the task as finished unless the user waived checks:
+
+- Run the project’s **lint** command if defined.
+- Run the project’s **typecheck** if defined.
+- Take script names from `AGENTS.md`, `README.md`, `package.json`, or CI—not assumptions.
+- If the repo defines neither or edits are non-code only, skip; mention that briefly only when it affects how you verified the change.

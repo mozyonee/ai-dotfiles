@@ -1,5 +1,5 @@
 ---
-description: No commits deploys deletes or other irreversible side effects without explicit user request
+description: No commits, deploys, deletes, or other irreversible side effects without explicit user request
 alwaysApply: true
 ---
 
